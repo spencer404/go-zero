@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/peer"
 )
 
-const serverSlowThreshold = time.Millisecond * 500
+const serverSlowThreshold = time.Second * 16
 
 // UnaryStatInterceptor returns a func that uses given metrics to report stats.
 func UnaryStatInterceptor(metrics *stat.Metrics) grpc.UnaryServerInterceptor {

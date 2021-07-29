@@ -10,7 +10,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-const slowThreshold = time.Millisecond * 500
+const slowThreshold = time.Second * 16
 
 // DurationInterceptor is an interceptor that logs the processing time.
 func DurationInterceptor(ctx context.Context, method string, req, reply interface{},
